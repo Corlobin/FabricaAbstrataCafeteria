@@ -33,5 +33,11 @@ public class Cafe {
         this.ingredientes = ingredientes;
     }
 
+    @Override
+    public String toString() {
+        return this.ingredientes.toString();
+    }
+    
+    
     
 }

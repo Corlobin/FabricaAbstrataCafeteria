@@ -19,7 +19,6 @@ public class Ingredientes {
     public Ingredientes(String ingredientes) {
         String concat = this.ingredientes.concat(ingredientes);
         this.ingredientes = concat;
-        System.out.println(concat);
     }
 
     /**
@@ -35,4 +34,14 @@ public class Ingredientes {
     public void setIngredientes(String ingredientes) {
         this.ingredientes = ingredientes;
     }
+
+    public boolean contem(String ingrediente) {
+        return this.ingredientes.contains(ingrediente);
+    }
+    @Override
+    public String toString() {
+        return this.ingredientes;
+    }
+    
+    
 }

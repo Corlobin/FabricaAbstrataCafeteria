@@ -5,12 +5,17 @@
  */
 package ifes.cafeteria.application;
 
+import ifes.cafeteria.cdp.Cafe;
+import ifes.cafeteria.util.FabricaCafe;
+
 /**
  *
  * @author 20122bsi0387
  */
 public class Application {
     public static void main(String args[]) {
-        
+        Cafe cafe = new Cafe();
+        cafe = FabricaCafe.criarCafe("normal");
+        System.out.println("cafe: "+cafe);
     }
 }
