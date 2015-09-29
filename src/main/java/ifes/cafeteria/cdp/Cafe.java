@@ -5,39 +5,48 @@
  */
 package ifes.cafeteria.cdp;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author 20122bsi0387
  */
 public class Cafe {
-    private Ingredientes ingredientes;
-
+    private ArrayList<Ingredientes> ingredientes;
+    private int preco;
     public Cafe() {
     }
 
-    public Cafe(Ingredientes ingredientes) {   
+    public Cafe(int preco, ArrayList<Ingredientes> ingredientes){
+        this.preco = preco;
         this.ingredientes = ingredientes;
     }
 
-    /**
-     * @return the ingredientes
-     */
-    public Ingredientes getIngredientes() {
+    public ArrayList<Ingredientes> getIngredientes() {
         return ingredientes;
     }
 
-    /**
-     * @param ingredientes the ingredientes to set
-     */
-    public void setIngredientes(Ingredientes ingredientes) {
+    public void setIngredientes(ArrayList<Ingredientes> ingredientes) {
         this.ingredientes = ingredientes;
+    }
+
+    public int getPreco() {
+        return preco;
+    }
+
+    public void setPreco(int preco) {
+        this.preco = preco;
     }
 
     @Override
     public String toString() {
-        return this.ingredientes.toString();
+        StringBuilder st = new StringBuilder();
+        for (Ingredientes ingrediente: ingredientes) {
+            st.append(ingrediente);
+            st.append(" ");
+        }
+        return st.toString();
     }
-    
     
     
 }

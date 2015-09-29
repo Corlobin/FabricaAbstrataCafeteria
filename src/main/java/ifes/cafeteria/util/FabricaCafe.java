@@ -14,6 +14,7 @@ import ifes.cafeteria.cdp.Cafe;
 public class FabricaCafe {
     public static Cafe criarCafe(String nome) {
         Fabrica fabrica;
+        
         if(nome.equals("normal")) {
             fabrica = new FabricaCafeNormal();
         }else if(nome.equals("sem cafeína")) {

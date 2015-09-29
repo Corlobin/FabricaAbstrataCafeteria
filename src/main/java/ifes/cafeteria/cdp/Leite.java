@@ -7,17 +7,12 @@ package ifes.cafeteria.cdp;
 
 /**
  *
- * @author 20122bsi0387
+ * @author Ricardo
  */
-public abstract class Ingredientes { 
-    int quantidade;
+public abstract class Leite extends Ingredientes {
 
-    public void setQuantidade(int quantidade) {
-        this.quantidade = quantidade;
-    }
-
-    public int getQuantidade() {
-        return quantidade;
+    public Leite(int qtd) {
+        this.quantidade = qtd;
     }
     
 }

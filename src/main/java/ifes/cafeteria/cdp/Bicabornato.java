@@ -7,17 +7,17 @@ package ifes.cafeteria.cdp;
 
 /**
  *
- * @author 20122bsi0387
+ * @author Ricardo
  */
-public abstract class Ingredientes { 
-    int quantidade;
+public class Bicabornato extends Ingredientes {
 
-    public void setQuantidade(int quantidade) {
-        this.quantidade = quantidade;
+    public Bicabornato(int qtd) {
+        this.quantidade = qtd;
     }
-
-    public int getQuantidade() {
-        return quantidade;
+    @Override
+    public String toString() {
+        return quantidade + "g de bicabornato";
     }
+    
     
 }

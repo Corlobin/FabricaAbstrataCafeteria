@@ -7,6 +7,7 @@ package ifes.cafeteria.util;
 
 import ifes.cafeteria.cdp.Cafe;
 import ifes.cafeteria.cdp.Ingredientes;
+import java.util.ArrayList;
 
 
 /**
@@ -15,6 +16,5 @@ import ifes.cafeteria.cdp.Ingredientes;
  */
 public interface Fabrica {
     public Cafe criarCafe();
-    public Ingredientes criarIngredientes();
-
+    public ArrayList<Ingredientes> criarIngredientes();
 }

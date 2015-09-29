@@ -5,8 +5,8 @@
  */
 package ifes.cafeteria.util;
 
-import ifes.cafeteria.cdp.Cafe;
-import ifes.cafeteria.cdp.Ingredientes;
+import ifes.cafeteria.cdp.*;
+import java.util.ArrayList;
 
 /**
  *
@@ -20,8 +20,16 @@ public class FabricaCafeCappuccino implements Fabrica {
     }
 
     @Override
-    public Ingredientes criarIngredientes() {
-        return new Ingredientes("100g de café solúvel, 200g de açúcar, 100g lata de leite em pó, 1 colher de chá de bicarbonato, 50g de chocolate em pó e 1 colher (sobremesa) de canela");
+    public ArrayList<Ingredientes> criarIngredientes() {
+        ArrayList<Ingredientes> ingredientes = new ArrayList<Ingredientes>();
+        ingredientes.add(new Agua(100));
+        ingredientes.add(new CafeSoluvel(50));
+        ingredientes.add(new Acucar(200));
+        ingredientes.add(new LeiteEmPo(1));        
+        ingredientes.add(new Bicabornato(1));        
+        ingredientes.add(new LeiteEmPo(1));        
+        ingredientes.add(new ChocolateEmPo(50));        
+        ingredientes.add(new Canela(1));        
+        return ingredientes;
     }
-
 }

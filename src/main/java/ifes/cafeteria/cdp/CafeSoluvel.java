@@ -7,17 +7,16 @@ package ifes.cafeteria.cdp;
 
 /**
  *
- * @author 20122bsi0387
+ * @author Ricardo
  */
-public abstract class Ingredientes { 
-    int quantidade;
+public class CafeSoluvel extends Ingredientes {
 
-    public void setQuantidade(int quantidade) {
-        this.quantidade = quantidade;
+    public CafeSoluvel(int qtd) {
+        this.quantidade = qtd;
     }
-
-    public int getQuantidade() {
-        return quantidade;
+    @Override
+    public String toString() {
+        return quantidade + "ml cafe soluvel";
     }
     
 }

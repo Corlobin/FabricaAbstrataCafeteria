@@ -5,8 +5,14 @@
  */
 package ifes.cafeteria.util;
 
+import ifes.cafeteria.cdp.Acucar;
+import ifes.cafeteria.cdp.Agua;
 import ifes.cafeteria.cdp.Cafe;
+import ifes.cafeteria.cdp.CafeSemCafeina;
+import ifes.cafeteria.cdp.CafeSoluvel;
 import ifes.cafeteria.cdp.Ingredientes;
+import ifes.cafeteria.cdp.LeiteNormal;
+import java.util.ArrayList;
 
 /**
  *
@@ -20,8 +26,13 @@ public class FabricaCafeSemCafeina implements Fabrica {
     }
 
     @Override
-    public Ingredientes criarIngredientes() {
-        return new Ingredientes("50 g de café solúvel sem cafeína, 2 xícaras de açúcar, 1 xícara de leite com 100 ml");
+    public ArrayList<Ingredientes> criarIngredientes() {
+        ArrayList<Ingredientes> ingredientes = new ArrayList<Ingredientes>();
+        ingredientes.add(new Agua(100));
+        ingredientes.add(new CafeSemCafeina(50));
+        ingredientes.add(new Acucar(2));
+        ingredientes.add(new LeiteNormal(1));        
+        return ingredientes;
     }
 
 }
