@@ -26,17 +26,11 @@ public class FabricaCafe {
         dias.put("domingo", new FabricaCafeCappuccinoPromocao());
     }
     public static Cafe criarCafe(String dia) {
-        Fabrica fabrica;
+        System.out.println(dias);
+        Fabrica fabrica = dias.getOrDefault(dia, new FabricaCafeNormalPromocao());
         
-        /*if(nome.equals("normal")) {
-            fabrica = new FabricaCafeNormal();
-        }else if(nome.equals("sem cafeína")) {
-            fabrica = new FabricaCafeSemCafeina();            
-        }else {
-            fabrica = new FabricaCafeCappuccino();                        
-        }*/
-        fabrica = dias.get(dia);
-         
+        System.out.println(dia);
+        
         Cafe cafe = fabrica.criarCafe();
         cafe.setIngredientes(fabrica.criarIngredientes());
         

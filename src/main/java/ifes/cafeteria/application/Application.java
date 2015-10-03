@@ -15,7 +15,7 @@ import ifes.cafeteria.util.FabricaCafe;
 public class Application {
     public static void main(String args[]) {
         Cafe cafe = new Cafe();
-        cafe = FabricaCafe.criarCafe("normal");
+        cafe = FabricaCafe.criarCafe("segunda-feira");
         System.out.println("cafe: "+cafe);
     }
 }
