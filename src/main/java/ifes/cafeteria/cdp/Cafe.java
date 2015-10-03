@@ -13,11 +13,15 @@ import java.util.ArrayList;
  */
 public class Cafe {
     private ArrayList<Ingredientes> ingredientes;
-    private int preco;
+    private double preco;
     public Cafe() {
     }
 
-    public Cafe(int preco, ArrayList<Ingredientes> ingredientes){
+    public Cafe(double valor) {
+        this.preco = valor;
+    }
+
+    public Cafe(double preco, ArrayList<Ingredientes> ingredientes){
         this.preco = preco;
         this.ingredientes = ingredientes;
     }
@@ -30,11 +34,11 @@ public class Cafe {
         this.ingredientes = ingredientes;
     }
 
-    public int getPreco() {
+    public double getPreco() {
         return preco;
     }
 
-    public void setPreco(int preco) {
+    public void setPreco(double preco) {
         this.preco = preco;
     }
 
